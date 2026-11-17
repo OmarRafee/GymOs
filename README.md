@@ -58,7 +58,7 @@ The GymOS Cloud project is in region `eu-central-1`. Migrations and seed data ar
 ```powershell
 npx supabase login
 npx supabase link --project-ref igzrdlxxwcrpsvphqyiw
-npx supabase db push --linked
+npx supabase db push --remote
 ```
 
 Deploy Edge Functions after linking:
