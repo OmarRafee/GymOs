@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "GymOS",
+    "slug": "gymos",
+    "scheme": "gymos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      ["expo-camera", { "cameraPermission": "GymOS uses your camera to scan a secure member check-in QR code.", "microphonePermission": "GymOS does not record audio.", "recordAudioAndroid": false, "barcodeScannerEnabled": true }],
+      "expo-secure-store"
+    ],
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.gymos.app", "infoPlist": { "NSCameraUsageDescription": "GymOS uses your camera to scan a secure member check-in QR code." } },
+    "android": { "package": "com.gymos.app", "permissions": ["CAMERA"] },
+    "experiments": { "typedRoutes": true }
+  }
+}

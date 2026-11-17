@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101a16" />
+  <meta name="description" content="GymOS helps your team run a better gym, every day." />
+  <title>GymOS — Gym operations, made clear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="GymOS home"><span class="brand-mark">G</span><span>gym<span class="brand-light">OS</span><small>FITNESS CLUB</small></span></a>
+      <div class="branch-switch"><span class="branch-dot"></span><span><small>YOUR LOCATION</small><strong>Downtown Club</strong></span><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#dashboard" class="nav-link active" data-page="dashboard"><span class="nav-icon">◫</span>Overview</a>
+        <a href="#members" class="nav-link" data-page="members"><span class="nav-icon">♙</span>Members <span class="nav-count" id="member-nav-count"></span></a>
+        <a href="#attendance" class="nav-link" data-page="attendance"><span class="nav-icon">◷</span>Attendance</a>
+        <a href="#classes" class="nav-link" data-page="classes"><span class="nav-icon">▦</span>Classes</a>
+        <a href="#trainers" class="nav-link" data-page="trainers"><span class="nav-icon">♧</span>Trainers</a>
+        <div class="nav-label nav-label-spaced">INSIGHTS</div>
+        <a href="#reports" class="nav-link" data-page="reports"><span class="nav-icon">⌁</span>Reports</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✳</div><strong>Here to help</strong><p>Questions about your club setup?</p><a href="mailto:hello@gymos.app">Talk to our team <span>↗</span></a></div>
+        <a href="#settings" class="nav-link" data-page="settings"><span class="nav-icon">⚙</span>Settings</a>
+        <div class="profile"><div class="avatar avatar-dark">AK</div><span><strong>Ahmed Khalil</strong><small>Club owner</small></span><button class="icon-button" aria-label="Account menu">···</button></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button id="menu-toggle" class="icon-button menu-toggle" aria-label="Toggle navigation">☰</button><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-current">Overview</strong></div><div class="top-actions"><span class="today-label" id="today-label"></span><button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button><div class="avatar avatar-green">AK</div></div></header>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

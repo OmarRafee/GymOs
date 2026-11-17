@@ -1,0 +1,13 @@
+{
+  "name": "gymos",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/admin", "apps/mobile"],
+  "scripts": {
+    "admin": "npm run dev --workspace @gymos/admin",
+    "admin:build": "npm run build --workspace @gymos/admin",
+    "mobile": "npm run start --workspace @gymos/mobile",
+    "mobile:ios": "npm run ios --workspace @gymos/mobile",
+    "mobile:check": "npm run typecheck --workspace @gymos/mobile"
+  }
+}

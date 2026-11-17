@@ -1,0 +1,32 @@
+project_id = "gymos"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+major_version = 17
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/**", "gymos://**"]
+enable_signup = true
+
+[storage]
+enabled = true
+
+[functions.create-member-link-code]
+verify_jwt = true
+
+[functions.member-qr]
+verify_jwt = true
+
+[functions.check-in]
+verify_jwt = true

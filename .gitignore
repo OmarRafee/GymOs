@@ -1,0 +1,28 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+expo-env.d.ts
+.expo/
+.expo-home/
+web-build/
+expo-go-qr.png
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+supabase/.temp/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+
