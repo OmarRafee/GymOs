@@ -92,7 +92,7 @@ Owners and managers can see all branches. Use the admin dashboard to add a membe
 - RLS policies for staff roles and linked members.
 - Admin member creation with a membership in one database transaction.
 - One-time member linking codes, expiring member QR credentials, and idempotent check-in through Edge Functions.
-- Mobile home, membership, classes, digital membership card, account linking, and staff QR scanner screens.
+- Mobile home with percentage occupancy, plan history and freeze/resume controls, published plan options, animated class cards, digital membership card, account linking, and a polished profile.
 - Seeded synthetic organization, Downtown Club branch, plans, class types, members, and attendance data.
 
 ## Not in the pilot yet
