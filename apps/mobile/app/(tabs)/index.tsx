@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { Link } from 'expo-router';
 import { supabase } from '@/lib/supabase';
 import { useSession } from '@/lib/session';
@@ -93,7 +93,7 @@ export default function Home() {
 
       <View style={ui.row}><Text style={styles.sectionTitle}>QUICK ACCESS</Text><Text style={styles.limeText}>MEMBER SERVICES</Text></View>
       <View style={styles.grid}>
-        <Link href="/(tabs)/card" asChild><View style={styles.quickTile}><Text style={styles.quickIcon}>▣</Text><Text style={styles.quickTitle}>Digital pass</Text><Text style={ui.muted}>Your member QR card</Text></View></Link>
+        <Link href="/(tabs)/card" asChild><Pressable style={styles.quickTile}><Text style={styles.quickIcon}>▣</Text><Text style={styles.quickTitle}>Digital pass</Text><Text style={ui.muted}>Your member QR card</Text></View></Link>
         <Link href="/inbody" asChild><View style={styles.quickTile}><Text style={styles.quickIcon}>◉</Text><Text style={styles.quickTitle}>Body progress</Text><Text style={ui.muted}>InBody measurements</Text></View></Link>
       </View>
 
