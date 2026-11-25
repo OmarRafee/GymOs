@@ -6,3 +6,10 @@
 .mini-row span{display:flex;flex-direction:column;gap:4px}.mini-row strong{font-size:10px}.mini-row small{font-size:9px;color:#919c95}.mini-row>b{font-size:9px;color:#638542;white-space:nowrap}
 .table-panel>h2{font:700 14px Manrope;margin:0 0 7px}.table-panel>p{font-size:10px;color:#919c95;margin:0 0 9px}
 @media(max-width:850px){.overview-grid,.settings-grid{grid-template-columns:1fr}}
+
+.form-grid label{display:flex;flex-direction:column;gap:7px;font-size:11px;font-weight:700;margin:12px 0;color:#536057}
+.form-grid input:not([type=checkbox]),.form-grid select{height:39px;border:1px solid var(--line);border-radius:7px;padding:0 10px;background:#fff;color:var(--ink);min-width:0}
+.form-grid input:focus,.form-grid select:focus{outline:1px solid #a3c96c}
+.form-grid .check-label{flex-direction:row;align-items:center;gap:9px;font-weight:600}
+.form-grid input[type=checkbox]{accent-color:#182b20}
+.form-grid button{align-self:end;margin:12px 0}
