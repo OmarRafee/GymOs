@@ -4,7 +4,7 @@ import { colors } from '@/lib/ui';
 
 const icons: Record<string, string> = {
   index: '⌂',
-  membership: '▤',
+  membership: '◫',
   classes: '▦',
   card: '▣',
   profile: '◉',
@@ -14,34 +14,43 @@ export default function TabLayout() {
   return <Tabs screenOptions={({ route }) => ({
     headerShown: false,
     tabBarActiveTintColor: colors.deep,
-    tabBarInactiveTintColor: '#829188',
+    tabBarInactiveTintColor: '#7d8c83',
     tabBarShowLabel: true,
     tabBarHideOnKeyboard: true,
     tabBarStyle: {
       position: 'absolute',
-      left: 14,
-      right: 14,
-      bottom: 9,
-      height: 72,
-      paddingTop: 8,
-      paddingBottom: 8,
+      left: 15,
+      right: 15,
+      bottom: 10,
+      height: 76,
+      paddingTop: 9,
+      paddingBottom: 9,
       borderTopWidth: 1,
-      borderTopColor: 'rgba(255,255,255,0.9)',
-      borderRadius: 22,
-      backgroundColor: 'rgba(248,251,249,0.95)',
-      shadowColor: '#213c2c',
-      shadowOpacity: 0.13,
-      shadowRadius: 18,
-      shadowOffset: { width: 0, height: 7 },
-      elevation: 12,
+      borderTopColor: 'rgba(255,255,255,0.88)',
+      borderRadius: 25,
+      backgroundColor: 'rgba(248,252,249,0.88)',
+      shadowColor: '#203b2b',
+      shadowOpacity: 0.16,
+      shadowRadius: 22,
+      shadowOffset: { width: 0, height: 8 },
+      elevation: 14,
     },
-    tabBarLabelStyle: { fontSize: 10, fontWeight: '700', marginTop: 1 },
-    tabBarIcon: ({ color, focused }) => <View style={{ alignItems: 'center', justifyContent: 'center', width: 33, height: 29, borderRadius: 11, backgroundColor: focused ? 'rgba(200,241,105,0.62)' : 'transparent' }}>
-      <Text accessibilityElementsHidden style={{ color, fontSize: 21, lineHeight: 24, fontWeight: '700' }}>{icons[route.name]}</Text>
+    tabBarLabelStyle: { fontSize: 10, fontWeight: '800', marginTop: 2 },
+    tabBarIcon: ({ color, focused }) => <View style={{
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 35,
+      height: 31,
+      borderRadius: 12,
+      backgroundColor: focused ? 'rgba(212,244,119,0.76)' : 'rgba(255,255,255,0.18)',
+      borderWidth: focused ? 1 : 0,
+      borderColor: 'rgba(255,255,255,0.85)',
+    }}>
+      <Text accessibilityElementsHidden style={{ color, fontSize: 21, lineHeight: 25, fontWeight: '800' }}>{icons[route.name]}</Text>
     </View>,
   })}>
     <Tabs.Screen name="index" options={{ title: 'Home', tabBarAccessibilityLabel: 'Home' }} />
-    <Tabs.Screen name="membership" options={{ title: 'My plan', tabBarAccessibilityLabel: 'My plan and history' }} />
+    <Tabs.Screen name="membership" options={{ title: 'Plan', tabBarAccessibilityLabel: 'My plan and history' }} />
     <Tabs.Screen name="classes" options={{ title: 'Classes', tabBarAccessibilityLabel: 'Classes' }} />
     <Tabs.Screen name="card" options={{ title: 'My QR', tabBarAccessibilityLabel: 'My membership QR code' }} />
     <Tabs.Screen name="profile" options={{ title: 'Profile', tabBarAccessibilityLabel: 'Profile and account' }} />
