@@ -92,11 +92,12 @@ Owners and managers can see all branches. Use the admin dashboard to add a membe
 - RLS policies for staff roles and linked members.
 - Admin member creation with a membership in one database transaction.
 - One-time member linking codes, expiring member QR credentials, and idempotent check-in through Edge Functions.
-- Mobile home with percentage occupancy, plan history and freeze/resume controls, published plan options, animated class cards, digital membership card, account linking, and a polished profile.
+- Mobile home with percentage occupancy, plan history and freeze/resume controls, published plan options, class booking and cancellation, digital membership card with rotating one-time QR, account linking, InBody results shared by staff, and a polished profile.
+- Admin dashboard with member creation/link codes, manual attendance, named attendance feed, live database metrics, class schedule, and manual InBody measurement entry with member-visibility control.
 - Seeded synthetic organization, Downtown Club branch, plans, class types, members, and attendance data.
 
 ## Not in the pilot yet
 
-Payment gateway, real gym vendor integrations, NFC hardware, push notifications, waitlist promotion, personal training credits, nutrition plans, and production deployment. QR check-in works through the camera scanner. NFC is not enabled in Expo Go; NFC requires a compatible native module and usually a custom development build, so the app keeps QR as the working option and the database integration path can be added after the gym identifies its access-control vendor.
+Payment gateway, real gym vendor integrations, NFC hardware, push notifications, waitlist promotion, personal training packages/credits, nutrition plans, automatic InBody device import, private report-file upload/viewer, and production deployment. Manual InBody values can be entered by authorized staff; member-visible results appear in the mobile app. QR check-in works through the camera scanner. NFC is not enabled in Expo Go; NFC requires a compatible native module and usually a custom development build, so the app keeps QR as the working option and the database integration path can be added after the gym identifies its access-control vendor.
 
 The `prototype` folder is an offline concept only; do not use its numbers for business decisions.
