@@ -16,7 +16,7 @@ function MenuRow({ icon, label, detail, href }: {
   icon: string;
   label: string;
   detail: string;
-  href: '/(tabs)/membership' | '/(tabs)/card' | '/(tabs)/classes' | '/link-member';
+  href: '/(tabs)/membership' | '/(tabs)/card' | '/(tabs)/classes' | '/link-member' | '/inbody';
 }) {
   return <Link href={href} asChild>
     <Pressable style={({ pressed }) => [styles.menuRow, pressed && { opacity: 0.68 }]}>
@@ -110,6 +110,8 @@ export default function Profile() {
             <MenuRow icon="▣" label="Digital member card" detail="Your secure, refreshing check-in QR" href="/(tabs)/card" />
             <View style={styles.separator} />
             <MenuRow icon="▦" label="Class schedule" detail="Browse and book club sessions" href="/(tabs)/classes" />
+            <View style={styles.separator} />
+            <MenuRow icon="◈" label="InBody progress" detail="View measurements shared by your gym" href="/inbody" />
           </Card>
         </View>
 
